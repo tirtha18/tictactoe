@@ -22,7 +22,7 @@ export default function Welcome() {
       }, [clicked]);
     return (
     <div className=" text-white bg-black flex w-screen items-center justify-center min-h-screen ">
-        <div className=" bg-sky-400 flex flex-col min-w-[360px] h-screen max-w-full items-center relative">
+        <div className=" bg-sky-400 flex flex-col w-screen sm:w-[360px] h-screen items-center relative">
             <div className="w-[182px] h-[61px] px-6 py-4 bg-white rounded-bl-2xl rounded-br-2xl justify-center items-center gap-2 inline-flex">
                 <div className="text-center text-sky-400 text-2xl font-bold">Tic Tac Toe</div>
             </div>
@@ -40,7 +40,7 @@ export default function Welcome() {
             </div>
             {(clicked)&&
             (<div className="Gameup">
-                <div className="z-10 absolute bottom-0 left-1/2 transform -translate-x-1/2 min-w-[360px] items-center justify-center">
+                <div className="z-10 absolute bottom-0 left-1/2 transform -translate-x-1/2 w-screen sm:min-w-[360px] items-center justify-center">
                     <div className=""><Game playerstart={bclicked}></Game></div>
                 </div>
             </div>)
