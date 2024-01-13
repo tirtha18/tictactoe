@@ -13,7 +13,7 @@ export default function Draw() {
           Congrats to both of you for equally excelling in the art of not winning.
         </div>
       </div>
-      <div onClick={() => {window.location.reload();}} className="w-[179px] h-[72px] px-12 py-[18px] bg-sky-700 rounded-[56px] shadow justify-center items-center gap-2 inline-flex mt-9 mb-6">
+      <div onClick={() => {window.location.reload();}} className="hover:scale-105 cursor-pointer w-[179px] h-[72px] px-12 py-[18px] bg-sky-700 rounded-[56px] shadow justify-center items-center gap-2 inline-flex mt-9 mb-6">
         <div className="text-white text-base font-bold font-['Inter'] uppercase leading-tight tracking-wider">Replay</div>
       </div>
     </div>
