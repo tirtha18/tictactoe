@@ -141,13 +141,14 @@ export default function Game(props) {
     });
   }, [draw]);
   return (
-    <div className=" text-white bg-black flex w-screen items-center justify-center min-h-screen ">
-      <div className=" bg-sky-400 flex flex-col w-screen sm:w-[360px] h-screen items-center  relative">
+    <div className=" text-white bg-black flex-col flex w-screen items-center justify-center min-h-screen ">
+      <div className="">
+        <div className={`bg-sky-400 flex flex-col w-screen sm:w-[360px] h-screen items-center relative ${wins || draw ? 'brightness-[0.4]' : ''}`}>
         <div className="w-[182px] h-[61px] px-6 py-4 bg-white rounded-bl-2xl rounded-br-2xl justify-center items-center gap-2 inline-flex">
           <div className="text-center text-sky-400 text-2xl font-bold">Tic Tac Toe</div>
         </div>
         <div className=" text-white  text-[32px] font-medium top-[240px] mt-auto">
-          <h1>Player {player} Turn!</h1>
+          {!(wins || draw) && (<h1>Player {player} Turn!</h1>)}
         </div>
         <div className="flex flex-col justify-center h-96 sm:h-80 w-screen sm:w-[360px] mt-auto mb-12">
           <div className="flex flex-row h-1/3 border-y-4 border-white">
@@ -326,6 +327,7 @@ export default function Game(props) {
               {r3c3}
             </button>
           </div>
+        </div>
         </div>
         {(onewins||twowins)&&(
         <div className="SliderWin">
